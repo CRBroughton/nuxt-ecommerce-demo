@@ -72,5 +72,8 @@
     "jsonc",
     "yaml",
     "toml"
+  ],
+  "conventionalCommits.scopes": [
+    "tokens"
   ]
 }

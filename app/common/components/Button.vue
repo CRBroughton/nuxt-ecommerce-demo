@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <button class="bg-red-500">
+  <button class="rounded-xl bg-primary px-lg py-md text-secondary">
     <slot />
   </button>
 </template>
