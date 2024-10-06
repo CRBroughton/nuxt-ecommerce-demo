@@ -1,4 +1,11 @@
-import { borderRadius, colors, spacing } from './app/common/tokens'
+import {
+  borderRadius,
+  borderWidth,
+  colors,
+  fontSize,
+  fontWeight,
+  spacing,
+} from './app/common/tokens'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -27,5 +34,8 @@ module.exports = {
     spacing,
     colors,
     borderRadius,
+    borderWidth,
+    fontSize,
+    fontWeight,
   },
 }

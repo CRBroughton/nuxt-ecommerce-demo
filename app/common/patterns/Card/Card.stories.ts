@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { h } from 'vue'
-import Button from './Button.vue'
+import Card from './Card.vue'
 
 const meta = {
-  title: 'Custom/Button',
-  component: Button,
-} satisfies Meta<typeof Button>
+  title: 'Patterns/Card',
+  component: Card,
+} satisfies Meta<typeof Card>
 
 export default meta
 type Story = StoryObj<typeof meta>
@@ -17,11 +17,9 @@ type StoryWithSlots = Story & {
 
 export const Primary: StoryWithSlots = {
   args: {
-    default: 'Im a button',
+    default: 'Im a Card',
   },
   render(args) {
-    return h(Button, args, {
-      default: () => args.default,
-    })
+    return h(Card, args)
   },
 }
