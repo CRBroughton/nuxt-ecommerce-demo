@@ -1,4 +1,4 @@
-type TailwindTokenSet = Record<string, string>
+type TailwindTokenSet = Record<string, string | string[]>
 export const colors: TailwindTokenSet = {
   primary: '#1D4ED8',
   secondary: '#6B7280',
@@ -50,9 +50,13 @@ export const fontWeight: TailwindTokenSet = {
   extrabold: '800',
 }
 
-export const flex = {
+export const flex: TailwindTokenSet = {
   1: '1 1 0%',
   auto: '1 1 auto',
   initial: '0 1 auto',
   none: 'none',
+}
+
+export const fontFamily: TailwindTokenSet = {
+  roboto: ['Roboto'],
 }

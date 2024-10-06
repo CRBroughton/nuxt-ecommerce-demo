@@ -18,6 +18,11 @@ export default defineNuxtConfig({
       ],
     },
   },
+  fonts: {
+    families: [
+      { name: 'Roboto', provider: 'google' },
+    ],
+  },
 
   imports: {
     presets: [
@@ -36,7 +41,7 @@ export default defineNuxtConfig({
     viewer: { endpoint: '/_tailwind', exportViewer: true },
   },
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/image'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/image', '@nuxt/fonts'],
   compatibilityDate: '2024-09-30',
   extends: [
     'app/common',
