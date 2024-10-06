@@ -32,6 +32,10 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
+  tailwindcss: {
+    viewer: { endpoint: '/_tailwind', exportViewer: true },
+  },
+
   modules: ['@nuxtjs/tailwindcss', '@nuxt/image'],
   compatibilityDate: '2024-09-30',
   extends: [
