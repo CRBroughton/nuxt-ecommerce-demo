@@ -1,0 +1,40 @@
+{
+  "name": "nuxt-commerce-demo",
+  "type": "module",
+  "private": true,
+  "author": "Craig R Broughton",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "storybook": "storybook dev --port 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.11.1",
+    "class-variance-authority": "^0.7.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.7.3",
+    "@nuxtjs/storybook": "7.0.2",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "@storybook-vue/nuxt": "^8.2.0",
+    "@storybook/addon-essentials": "^8.3.4",
+    "@storybook/addon-interactions": "^8.3.4",
+    "@storybook/addon-links": "8.0.8",
+    "@storybook/blocks": "^8.3.4",
+    "@storybook/builder-vite": "^8.3.4",
+    "@storybook/test": "^8.3.4",
+    "@storybook/vue3": "^8.3.4",
+    "@types/node": "^18.19.54",
+    "eslint": "^9.11.1",
+    "eslint-plugin-tailwindcss": "^3.17.4",
+    "jsdoc-type-pratt-parser": "^4.1.0",
+    "nuxt": "^3.13.2",
+    "storybook": "^8.3.4",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8"
+  }
+}
