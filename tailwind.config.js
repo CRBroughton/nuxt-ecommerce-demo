@@ -2,8 +2,10 @@ import {
   borderRadius,
   borderWidth,
   colors,
+  flex,
   fontSize,
   fontWeight,
+  gap,
   spacing,
 } from './app/common/tokens'
 
@@ -19,8 +21,7 @@ module.exports = {
     './plugins/**/*.{js,ts}',
     './nuxt.config.{js,ts}',
     './error.vue',
-    './app/**/components/**/*.{js,vue,ts}',
-    './app/**/pages/*.{js,vue,ts}',
+    './app/**/**/**/*.{js,vue,ts}',
   ],
 
   theme: {
@@ -31,11 +32,14 @@ module.exports = {
         '2xl': '1400px',
       },
     },
+
     spacing,
     colors,
     borderRadius,
     borderWidth,
     fontSize,
     fontWeight,
+    flex,
+    gap,
   },
 }

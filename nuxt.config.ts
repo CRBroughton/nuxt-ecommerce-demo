@@ -19,11 +19,20 @@ export default defineNuxtConfig({
     },
   },
 
+  imports: {
+    presets: [
+      {
+        from: 'class-variance-authority',
+        imports: ['VariantProps', 'cva'],
+      },
+    ],
+  },
+
   devtools: {
     enabled: true,
   },
 
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/image'],
   compatibilityDate: '2024-09-30',
   extends: [
     'app/common',

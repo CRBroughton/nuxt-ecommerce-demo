@@ -25,3 +25,15 @@ export const Primary: StoryWithSlots = {
     })
   },
 }
+
+export const Secondary: StoryWithSlots = {
+  args: {
+    default: 'Im a button',
+    intent: 'secondary',
+  },
+  render(args) {
+    return h(Button, args, {
+      default: () => args.default,
+    })
+  },
+}

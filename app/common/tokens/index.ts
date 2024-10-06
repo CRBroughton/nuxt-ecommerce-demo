@@ -15,6 +15,12 @@ export const spacing: TailwindTokenSet = {
   'xl': '1.5rem',
   '2xl': '2rem',
 }
+export const gap: TailwindTokenSet = {
+  2: spacing.sm as string,
+  4: spacing.md as string,
+  8: spacing.lg as string,
+}
+
 export const borderRadius: TailwindTokenSet = {
   sm: '0.125rem',
   md: '0.375rem',
@@ -42,4 +48,11 @@ export const fontWeight: TailwindTokenSet = {
   semibold: '600',
   bold: '700',
   extrabold: '800',
+}
+
+export const flex = {
+  1: '1 1 0%',
+  auto: '1 1 auto',
+  initial: '0 1 auto',
+  none: 'none',
 }

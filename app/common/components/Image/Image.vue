@@ -1,9 +1,10 @@
 <script setup lang="ts">
 defineProps<{
   src: string
+  alt: string
 }>()
 </script>
 
 <template>
-  <img :src>
+  <NuxtImg :src :alt class="w-full object-cover" />
 </template>

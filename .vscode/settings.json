@@ -74,6 +74,7 @@
     "toml"
   ],
   "conventionalCommits.scopes": [
-    "tokens"
+    "tokens",
+    "components"
   ]
 }

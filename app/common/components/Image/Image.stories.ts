@@ -13,6 +13,7 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   args: {
     src: 'https://placehold.co/600x400',
+    alt: 'Some placeholder',
   },
   render(args) {
     return h(Image, args)
