@@ -9,7 +9,7 @@ withDefaults(
 )
 
 type ButtonProps = CVAProps<typeof button>
-const button = cva('w-fit rounded-full border-normal px-md py-sm', {
+const button = cva('w-full rounded-full border-normal px-md py-sm', {
   variants: {
     intent: {
       primary: 'border-primary bg-light text-dark',

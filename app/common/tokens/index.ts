@@ -9,7 +9,7 @@ export const themes = createThemes({
     success: '#22C55E',
     danger: '#EF4444',
     warning: '#FBBF24',
-    light: '#E5E7EB',
+    light: '#FFFFFF',
     dark: '#374151',
   },
   dark: {
