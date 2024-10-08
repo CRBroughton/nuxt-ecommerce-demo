@@ -4,7 +4,7 @@ import Image from '~/common/components/Image/Image.vue'
 import Card from './Card.vue'
 
 const meta = {
-  title: 'Patterns/Card',
+  title: 'Base/Components/Card',
   component: Card,
 } satisfies Meta<typeof Card>
 
@@ -27,11 +27,13 @@ export const Primary: StoryWithSlots = {
     amount: '$29.99',
   },
   render(args) {
-    return h(Card, args, {
-      default: () => args.default,
-      heading: () => args.heading,
-      subheading: () => args.subheading,
-      amount: () => args.amount,
-    })
+    return h('div', { class: 'light' }, [
+      h(Card, args, {
+        default: () => args.default,
+        heading: () => args.heading,
+        subheading: () => args.subheading,
+        amount: () => args.amount,
+      }),
+    ])
   },
 }

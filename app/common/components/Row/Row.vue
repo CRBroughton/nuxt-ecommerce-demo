@@ -3,12 +3,14 @@ const props = withDefaults(
   defineProps<{
     type?: string
     gap?: RowProps['gap']
+    justify?: RowProps['justify']
     wrap?: RowProps['wrap']
     reverse?: RowProps['reverse']
   }>(),
   {
     type: 'div',
     gap: 2,
+    justify: 'start',
     wrap: false,
     reverse: false,
   },
@@ -22,6 +24,11 @@ const row = cva('flex', {
       4: 'gap-4',
       8: 'gap-8',
     },
+    justify: {
+      start: 'justify-start',
+      center: 'justify-center',
+      end: 'justify-end',
+    },
     wrap: {
       true: 'flex-wrap',
     },
@@ -33,7 +40,7 @@ const row = cva('flex', {
 </script>
 
 <template>
-  <Component :is="props.type" :class="row({ gap, wrap })">
+  <Component :is="props.type" :class="row(props)">
     <slot />
   </Component>
 </template>

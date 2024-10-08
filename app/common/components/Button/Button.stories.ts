@@ -20,9 +20,11 @@ export const Primary: StoryWithSlots = {
     default: 'Im a button',
   },
   render(args) {
-    return h(Button, args, {
-      default: () => args.default,
-    })
+    return h('div', { class: 'light' }, [
+      h(Button, args, {
+        default: () => args.default,
+      }),
+    ])
   },
 }
 
@@ -32,8 +34,10 @@ export const Secondary: StoryWithSlots = {
     intent: 'secondary',
   },
   render(args) {
-    return h(Button, args, {
-      default: () => args.default,
-    })
+    return h('div', { class: 'light' }, [
+      h(Button, args, {
+        default: () => args.default,
+      }),
+    ])
   },
 }

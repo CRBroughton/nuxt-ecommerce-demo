@@ -1,13 +1,13 @@
 import {
   borderRadius,
   borderWidth,
-  colors,
   flex,
   fontFamily,
   fontSize,
   fontWeight,
   gap,
   spacing,
+  themes,
 } from './app/common/tokens'
 
 /** @type {import('tailwindcss').Config} */
@@ -24,7 +24,6 @@ module.exports = {
     './error.vue',
     './app/**/**/**/*.{js,vue,ts}',
   ],
-
   theme: {
     container: {
       center: true,
@@ -35,12 +34,15 @@ module.exports = {
     },
     borderRadius,
     borderWidth,
-    colors,
     flex,
     fontFamily,
     fontSize,
     fontWeight,
     gap,
     spacing,
+    colors: {},
   },
+  plugins: [
+    themes,
+  ],
 }

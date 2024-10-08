@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { h } from 'vue'
-import Card from '~/common/patterns/Card/Card.vue'
+import Card from '~/base/components/Card/Card.vue'
 import Image from '../Image/Image.vue'
 import Stack from './Stack.vue'
 

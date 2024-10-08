@@ -9,7 +9,7 @@ const props = withDefaults(
   {
     cols: 1,
     type: 'div',
-    gap: 2,
+    gap: 0,
     justify: 'start',
   },
 )
@@ -30,6 +30,7 @@ const stack = cva('grid', {
       stretch: 'justify-items-stretch',
     },
     gap: {
+      0: 'gap-0',
       2: 'gap-2',
       4: 'gap-4',
       8: 'gap-8',

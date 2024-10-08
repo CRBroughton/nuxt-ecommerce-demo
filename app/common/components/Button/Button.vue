@@ -12,8 +12,8 @@ type ButtonProps = CVAProps<typeof button>
 const button = cva('w-fit rounded-full border-normal px-md py-sm', {
   variants: {
     intent: {
-      primary: 'border-primary text-light',
-      secondary: 'border-secondary text-light',
+      primary: 'border-primary bg-light text-dark',
+      secondary: 'border-secondary bg-light text-dark',
     },
   },
 })

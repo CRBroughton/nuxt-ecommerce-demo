@@ -41,9 +41,18 @@ export default defineNuxtConfig({
     viewer: { endpoint: '/_tailwind', exportViewer: true },
   },
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/image', '@nuxt/fonts'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxt/image',
+    '@nuxt/fonts',
+    '@nuxtjs/color-mode',
+  ],
+  colorMode: {
+    classSuffix: '',
+  },
   compatibilityDate: '2024-09-30',
   extends: [
+    'app/base',
     'app/common',
   ],
 })

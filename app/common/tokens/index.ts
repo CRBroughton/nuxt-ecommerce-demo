@@ -1,14 +1,39 @@
+import { createThemes } from 'tw-colors'
+
 type TailwindTokenSet = Record<string, string | string[]>
-export const colors: TailwindTokenSet = {
-  primary: '#1D4ED8',
-  secondary: '#6B7280',
-  success: '#22C55E',
-  danger: '#EF4444',
-  warning: '#FBBF24',
-  light: '#374151',
-  dark: '#E5E7EB',
-}
+
+export const themes = createThemes({
+  light: {
+    primary: '#1D4ED8',
+    secondary: '#6B7280',
+    success: '#22C55E',
+    danger: '#EF4444',
+    warning: '#FBBF24',
+    light: '#E5E7EB',
+    dark: '#374151',
+  },
+  dark: {
+    primary: '#1DEED8',
+    secondary: '#6B7280',
+    success: '#22C55E',
+    danger: '#EF4444',
+    warning: '#FBBF24',
+    light: '#374151',
+    dark: '#E5E7EB',
+  },
+  hallowen: {
+    primary: '#10AEA1',
+    secondary: '#6B7280',
+    success: '#22C55E',
+    danger: '#EF4444',
+    warning: '#FBBF24',
+    light: '#374151',
+    dark: '#E5E7EB',
+  },
+})
+
 export const spacing: TailwindTokenSet = {
+  'none': 'unset',
   'sm': '0.375rem',
   'md': '1.125rem',
   'lg': '1.375rem',
@@ -16,6 +41,7 @@ export const spacing: TailwindTokenSet = {
   '2xl': '2rem',
 }
 export const gap: TailwindTokenSet = {
+  0: spacing.none as string,
   2: spacing.sm as string,
   4: spacing.md as string,
   8: spacing.lg as string,
