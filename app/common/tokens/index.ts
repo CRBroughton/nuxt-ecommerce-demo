@@ -84,5 +84,5 @@ export const flex: TailwindTokenSet = {
 }
 
 export const fontFamily: TailwindTokenSet = {
-  roboto: ['Roboto'],
+  manrope: ['Manrope'],
 }

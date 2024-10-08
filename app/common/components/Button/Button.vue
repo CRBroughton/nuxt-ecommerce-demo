@@ -21,6 +21,8 @@ const button = cva('w-full rounded-full border-normal px-md py-sm', {
 
 <template>
   <button :class="button({ intent })">
-    <slot />
+    <TextParagraph>
+      <slot />
+    </TextParagraph>
   </button>
 </template>

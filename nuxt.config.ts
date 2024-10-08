@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   },
   fonts: {
     families: [
-      { name: 'Roboto', provider: 'google' },
+      { name: 'Manrope', provider: 'google' },
     ],
   },
 
