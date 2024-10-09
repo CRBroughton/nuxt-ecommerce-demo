@@ -9,10 +9,10 @@ withDefaults(
 )
 
 type HeadingProps = CVAProps<typeof paragraph>
-const paragraph = cva('font-manrope', {
+const paragraph = cva('', {
   variants: {
     intent: {
-      main: 'text-secondary',
+      main: 'tracking-tighter',
     },
   },
 })

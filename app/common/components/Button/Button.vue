@@ -1,26 +1,32 @@
 <script setup lang="ts">
-withDefaults(
+const props = withDefaults(
   defineProps<{
     intent: ButtonProps['intent']
+    fit?: ButtonProps['fit']
   }>(),
   {
     intent: 'primary',
+    fit: false,
   },
 )
 
 type ButtonProps = CVAProps<typeof button>
-const button = cva('w-full rounded-full border-normal px-md py-sm', {
+const button = cva('rounded-full px-md py-sm', {
   variants: {
     intent: {
-      primary: 'border-primary bg-light text-dark',
-      secondary: 'border-secondary bg-light text-dark',
+      primary: 'bg-success shadow transition duration-200 hover:bg-success-fade',
+      secondary: 'bg-secondary shadow transition duration-200 hover:bg-secondary-fade',
+    },
+    fit: {
+      true: 'w-fit',
+      false: 'w-full',
     },
   },
 })
 </script>
 
 <template>
-  <button :class="button({ intent })">
+  <button :class="button(props)">
     <TextParagraph>
       <slot />
     </TextParagraph>

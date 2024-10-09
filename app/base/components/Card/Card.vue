@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <Stack :cols="1" class="mx-auto max-w-sm overflow-hidden rounded-lg bg-light shadow-md transition-transform hover:scale-105">
+  <Stack :cols="1" class="mx-auto max-w-sm overflow-hidden rounded-lg shadow-lg">
     <slot />
     <div class="p-sm">
       <div class="">
@@ -27,7 +27,7 @@
       <Button>
         Add to Cart
       </Button>
-      <Button>
+      <Button intent="secondary">
         View Details
       </Button>
     </Row>

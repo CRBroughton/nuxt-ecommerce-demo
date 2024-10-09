@@ -18,6 +18,7 @@ type StoryWithSlots = Story & {
 export const Primary: StoryWithSlots = {
   args: {
     default: 'Im a button',
+    fit: true,
   },
   render(args) {
     return h('div', { class: 'light' }, [
@@ -32,6 +33,7 @@ export const Secondary: StoryWithSlots = {
   args: {
     default: 'Im a button',
     intent: 'secondary',
+    fit: true,
   },
   render(args) {
     return h('div', { class: 'light' }, [

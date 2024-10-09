@@ -40,7 +40,7 @@ module.exports = {
     fontWeight,
     gap,
     spacing,
-    colors: {},
+    // colors: {},
   },
   plugins: [
     themes,

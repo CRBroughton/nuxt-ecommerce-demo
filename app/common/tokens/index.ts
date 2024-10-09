@@ -4,13 +4,15 @@ type TailwindTokenSet = Record<string, string | string[]>
 
 export const themes = createThemes({
   light: {
-    primary: '#1D4ED8',
-    secondary: '#6B7280',
-    success: '#22C55E',
-    danger: '#EF4444',
-    warning: '#FBBF24',
-    light: '#FFFFFF',
-    dark: '#374151',
+    'primary': '#EDE3E9',
+    'secondary': '#EBC3DB',
+    'secondary-fade': '#F0D1E3',
+    'success': '#DFFFD6',
+    'success-fade': '#EFFFEB',
+    'danger': '#FFC4C4',
+    'warning': '#FBBF24',
+    'light': '#FFFFFF',
+    'dark': '#374151',
   },
   dark: {
     primary: '#1DEED8',

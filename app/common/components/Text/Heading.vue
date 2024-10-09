@@ -9,7 +9,7 @@ withDefaults(
 )
 
 type HeadingProps = CVAProps<typeof heading>
-const heading = cva('font-manrope', {
+const heading = cva('', {
   variants: {
     intent: {
       main: 'text-xl font-bold tracking-tighter text-dark',
