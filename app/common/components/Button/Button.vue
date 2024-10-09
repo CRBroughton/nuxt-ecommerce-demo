@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    intent: ButtonProps['intent']
+    intent?: ButtonProps['intent']
     fit?: ButtonProps['fit']
   }>(),
   {

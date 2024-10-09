@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <Stack :cols="1" class="mx-auto max-w-sm overflow-hidden rounded-lg shadow-lg">
+  <Stack :cols="1" class="mx-auto max-w-sm overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-105">
     <slot />
     <div class="p-sm">
       <div class="">

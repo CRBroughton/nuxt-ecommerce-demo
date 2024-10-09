@@ -16,7 +16,7 @@ function createSkeletons() {
   const skeletons: VNode[] = []
   for (let index = 0; index < 10; index++) {
     skeletons.push(
-      h(Card, null, {
+      h(Card, { class: 'light' }, {
         default: () => h(
           Image,
           { src: 'https://via.placeholder.com/300', alt: 'test' },

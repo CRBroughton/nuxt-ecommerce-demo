@@ -1,7 +1,7 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    intent: HeadingProps['intent']
+    intent?: HeadingProps['intent']
   }>(),
   {
     intent: 'main',
