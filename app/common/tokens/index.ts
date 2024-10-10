@@ -1,8 +1,7 @@
+import type { Config } from 'tailwindcss'
 import { createThemes } from 'tw-colors'
 
-type TailwindTokenSet = Record<string, string | string[]>
-
-export const themes = createThemes({
+const colors = {
   light: {
     'primary': '#EDE3E9',
     'secondary': '#EBC3DB',
@@ -23,6 +22,10 @@ export const themes = createThemes({
     light: '#374151',
     dark: '#E5E7EB',
   },
+}
+
+export const themes = createThemes({
+  ...colors,
   hallowen: {
     primary: '#10AEA1',
     secondary: '#6B7280',
@@ -34,7 +37,7 @@ export const themes = createThemes({
   },
 })
 
-export const spacing: TailwindTokenSet = {
+export const spacing = {
   'none': 'unset',
   'sm': '0.375rem',
   'md': '1.125rem',
@@ -42,35 +45,35 @@ export const spacing: TailwindTokenSet = {
   'xl': '1.5rem',
   '2xl': '2rem',
 }
-export const gap: TailwindTokenSet = {
+export const gap = {
   0: spacing.none as string,
   2: spacing.sm as string,
   4: spacing.md as string,
   8: spacing.lg as string,
 }
 
-export const borderRadius: TailwindTokenSet = {
+export const borderRadius = {
   sm: '0.125rem',
   md: '0.375rem',
   lg: '0.5rem',
   full: '9999px',
   none: '0',
 }
-export const borderWidth: TailwindTokenSet = {
+export const borderWidth = {
   'thin': '1px',
   'normal': '2px',
   'thick': '4px',
   '2x-thick': '8px',
   'none': '0',
 }
-export const fontSize: TailwindTokenSet = {
+export const fontSize = {
   'sm': '0.875rem',
   'md': '1rem',
   'lg': '1.125rem',
   'xl': '1.25rem',
   '2xl': '1.5rem',
 }
-export const fontWeight: TailwindTokenSet = {
+export const fontWeight = {
   normal: '400',
   medium: '500',
   semibold: '600',
@@ -78,13 +81,53 @@ export const fontWeight: TailwindTokenSet = {
   extrabold: '800',
 }
 
-export const flex: TailwindTokenSet = {
+export const flex = {
   1: '1 1 0%',
   auto: '1 1 auto',
   initial: '0 1 auto',
   none: 'none',
 }
 
-export const fontFamily: TailwindTokenSet = {
+export const fontFamily = {
   manrope: ['Manrope'],
+}
+
+export function createTailwindConfig(env: 'development' | 'production'): Config {
+  return {
+    darkMode: ['class'],
+    safelist: ['dark'],
+    prefix: '',
+    content: [
+      './components/**/*.{js,vue,ts}',
+      './layouts/**/*.vue',
+      './pages/**/*.vue',
+      './plugins/**/*.{js,ts}',
+      './nuxt.config.{js,ts}',
+      './error.vue',
+      './app/**/**/**/*.{js,vue,ts}',
+    ],
+    theme: {
+      container: {
+        center: true,
+        padding: '2rem',
+        screens: {
+          '2xl': '1400px',
+        },
+      },
+      borderRadius,
+      borderWidth,
+      flex,
+      fontFamily,
+      fontSize,
+      fontWeight,
+      gap,
+      spacing,
+      colors: env === 'production' ? colors : {},
+    },
+    plugins: env === 'production'
+      ? []
+      : [
+          themes,
+        ],
+  }
 }
