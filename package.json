@@ -37,6 +37,7 @@
     "jsdoc-type-pratt-parser": "^4.1.0",
     "nuxt": "^3.13.2",
     "storybook": "^8.3.4",
+    "tailwindcss": "^3.4.13",
     "tw-colors": "^3.3.2",
     "typescript": "^5.6.2",
     "vite": "^5.4.8"
